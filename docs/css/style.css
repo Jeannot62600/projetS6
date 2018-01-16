@@ -1,0 +1,57 @@
+.header{
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  color: white;
+  height: 3.5em;
+  text-align: center;
+  font-size: large;
+  padding-top: 1em;
+  font-family: serif;
+}
+
+.footer{
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  color: white;
+  height: 3.5em;
+  text-align: center;
+  font-size: large;
+  padding-top: 1em;
+  font-family: serif;
+}
+
+.hitem {
+    background-color: #b9e1e6;
+    border-style: groove;
+}
+
+.output {
+    margin-left: 95%;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 20%;
+    /*height: 2em;*/
+}
+
+ul.command {
+    background-color: #ff0404b8;
+    height: 24em;
+}
+
+.menu {
+    border-style: groove;
+    border-color: red;
+}
+
+i:hover{
+  cursor:pointer;
+}
+
+.badge:hover{
+  cursor:pointer;
+}
