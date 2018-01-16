@@ -1,0 +1,11 @@
+{
+  "name": "calculatrice",
+  "version": "1.0.0",
+  "description": "Calculatrice Scientifique",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "Jean Lapostolle",
+  "license": "ISC"
+}
