@@ -35,6 +35,24 @@ function insert(last){
     calc.value = res;
 }
 
+function Docs(){
+  document.getElementById("grid").innerHTML = `
+  <div class="col-1-1">
+    <div class="card">
+    show docs
+    </div>
+
+  </div>
+  ` + document.getElementById("grid").innerHTML
+}
+
+function specialKey(e){
+  if(e.key == "Enter"){
+    makecalc();
+  }
+  //gestion de l'auto complétion ici
+}
+
 function makecalc(){
   var calc = document.getElementById("calc").value;
   var hist = document.getElementById("hist");

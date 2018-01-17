@@ -15,20 +15,20 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Calculatrice</a>
           </div>
-          <button class="btn btn-info navbar-btn">Documentation</button>
+          <button class="btn btn-info navbar-btn" onclick="Docs()">Documentation</button>
           <button class="btn btn-success navbar-btn">Importez une session</button>
           <button class="btn btn-danger navbar-btn">Exportez une session</button>
 
         </div>
       </nav>
 
-    <div class="grid grid-pad">
+    <div id="grid" class="grid grid-pad">
       <!-- <div class="alert alert-success"><i class="material-icons">done</i>Félicitations! Votre environnement de test à été correctement configuré.</div> -->
 
       <div class="col-1-1">
         <!-- <form> -->
           <div class="input-group">
-            <input id="calc" type="text" class="form-control" placeholder="Zone de Saisie">
+            <input id="calc" type="text" class="form-control" placeholder="Zone de Saisie" onkeypress="specialKey(event)">
             <div class="input-group-btn">
               <button class="btn btn-default" onclick="makecalc()">
                 =
