@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>contract.tex</title>
+</head>
+<body>
+<pre style='color:#eff0f1;background-color:#232629;'>
+<span style='color:#bdc3c7;'>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span style='color:#bdc3c7;'>% Contract</span>
+<span style='color:#bdc3c7;'>% LaTeX Template</span>
+<span style='color:#bdc3c7;'>% Version 1.0 (December 8 2014)</span>
+<span style='color:#bdc3c7;'>%</span>
+<span style='color:#bdc3c7;'>% This template has been downloaded from:</span>
+<span style='color:#bdc3c7;'>% http://www.LaTeXTemplates.com</span>
+<span style='color:#bdc3c7;'>%</span>
+<span style='color:#bdc3c7;'>% Original author:</span>
+<span style='color:#bdc3c7;'>% Brandon Fryslie</span>
+<span style='color:#bdc3c7;'>% With extensive modifications by:</span>
+<span style='color:#bdc3c7;'>% Vel (vel@latextemplates.com)</span>
+<span style='color:#bdc3c7;'>%</span>
+<span style='color:#bdc3c7;'>% License:</span>
+<span style='color:#bdc3c7;'>% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)</span>
+<span style='color:#bdc3c7;'>%</span>
+<span style='color:#bdc3c7;'>% Note:</span>
+<span style='color:#bdc3c7;'>% If you are using Apple OS X, go into structure.tex and uncomment the font</span>
+<span style='color:#bdc3c7;'>% specifications for OS X and comment out the default specifications - this will</span>
+<span style='color:#bdc3c7;'>% drastically increase how good the document looks. You will now need to</span>
+<span style='color:#bdc3c7;'>% compile with XeLaTeX.</span>
+<span style='color:#bdc3c7;'>%</span>
+<span style='color:#bdc3c7;'>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+<b><span style='color:#f57979;'>\documentclass</span></b>[a4paper,12pt]{<span style='color:#9595f3;'>article</span>} <span style='color:#bdc3c7;'>% The default font size is 12pt on A4 paper, change to 'usletter' for US Letter paper and adjust margins in structure.tex</span>
+<b><span style='color:#f57979;'>\usepackage</span></b>[francais]{<span style='color:#9595f3;'>babel</span>}
+<span style='color:#f57979;'>\input</span>{structure.tex} <span style='color:#bdc3c7;'>% Input the structure.tex file which specifies the document layout and style</span>
+<b><span style='color:#f57979;'>\usepackage</span></b>{<span style='color:#9595f3;'>graphicx</span>}
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	DYNAMIC CONTRACT INFORMATION</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#bdc3c7;'>% Your name and company name</span>
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\YourName</span>}{Jean LAPOSTOLLE et Lucas LEROY}
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\CompanyName</span>}{ORAY Corp.}
+
+<span style='color:#bdc3c7;'>% Your address</span>
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\AddressLineOne</span>}{127 rue de la route}
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\AddressLineTwo</span>}{80000, Amiens}
+
+<span style='color:#bdc3c7;'>% Your email address</span>
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\YourEmail</span>}{service.client@oray.fr}
+
+<span style='color:#bdc3c7;'>% The client's name</span>
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\ClientName</span>}{Projet corp.}
+
+<span style='color:#bdc3c7;'>% The delivery date for specifications and completion date for the project</span>
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\DeliveryDate</span>}{25 Janvier 2018}
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\CompletionDate</span>}{19 Avril 2018}
+
+
+<span style='color:#bdc3c7;'>% Payee's information</span>
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\PayeeName</span>}{ORAY corp.}
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\PaymentAddressLineOne</span>}{127 rue de la route}
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\PaymentAddressLineTwo</span>}{80000}
+<span style='color:#f57979;'>\newcommand</span>{<span style='color:#9595f3;'>\PaymentAddressLineThree</span>}{Amiens}
+
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>document</span>}
+
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	TITLE PAGE</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>titlepage</span>}
+
+<span style='color:#f57979;'>\vspace*</span>{<span style='color:#f57979;'>\fill</span>} <span style='color:#bdc3c7;'>% Add whitespace above to center the title page content</span>
+
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>center</span>}
+
+{<span style='color:#f57979;'>\LARGE</span> Cahier des Charges pour le logiciel de <span style='color:#f57979;'>\ClientName</span>~}<span style='color:#f57979;'>\\</span> [1.5cm]
+
+Soumis le: <span style='color:#f57979;'>\today</span>
+
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>center</span>}
+
+<span style='color:#f57979;'>\CompanyName\\</span>
+
+<span style='color:#f57979;'>\YourName\\</span>
+
+<span style='color:#f57979;'>\AddressLineOne</span>
+
+<span style='color:#f57979;'>\AddressLineTwo</span>
+
+<span style='color:#f57979;'>\YourEmail</span>
+
+<span style='color:#f57979;'>\vspace*</span>{<span style='color:#f57979;'>\fill</span>} <span style='color:#bdc3c7;'>% Add whitespace below to center the title page content</span>
+
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>titlepage</span>}
+
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	OBJECTIVE SECTION</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Objectifs</span></b>}
+
+<span style='color:#f57979;'>\YourName</span>~(mentionnésci-après comme les développeurs) est engagé par <span style='color:#f57979;'>\ClientName</span>~(mentionné ci-après comme le client)
+dans le projet de création d'un logiciel/site web de calcul scientifique(mentionné ci après comme la calculatrice). Le site Web sera hébergé par le client.
+Le projet a pour but, auprès du client, de proposer librement un service Web et un service logiciel de calcul scientifique à ceux qui souhaite une calculatrice fonctionnelle et intuitive.
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	DELIVERABLES SECTION</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Besoin du client</span></b>}
+
+Le client souhaitant répondre à la problèmatique du calcul scientifique libre, le produit devra répondre à minima aux besoins suivant:
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>itemize</span>}
+  <span style='color:#f57979;'>\item</span> Gestion des fonctions mathématiques de base.
+  <span style='color:#f57979;'>\item</span> Gestion de l'affichage graphique de fonctions
+  <span style='color:#f57979;'>\item</span> Résolution d'équation jusqu'au second degré
+  <span style='color:#f57979;'>\item</span> Gestion d'un historique des calculs
+  <span style='color:#f57979;'>\item</span> L'enregistrement de sessions de calculs
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>itemize</span>}
+ De plus une documentation utilisateur de la calculatrice devra être accessible.
+
+
+
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	SCHEDULE SECTION</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Termes du contrat</span></b>}
+
+Le projet devra être accompli avant le <span style='color:#f57979;'>\CompletionDate</span>.
+
+Aucun délai supplémentaire ne saurait être accordé.
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	TERMS AND CONDITIONS SECTION</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Conditions</span></b>}
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Hébergement</span></b>}
+L'hébergement est à la charge du client, les développeurs doivent empêcher la surcharge du serveur, notamment, en laissant la machine utilisateur faire les calculs.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Performance</span></b>}
+Les performances de la calculatrice ne sont pas pris en compte, mais un temps raisonnable est attendu, au moins pour les calculs basiques.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Maintenance</span></b>}
+La maintenance de la calculatrice ne fait pas partie du présent contrat. Un éventuel nouveau contrat pourrait être engagé, à la suite des résultats de celui-ci, concernant la maintenance.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Limites de la calculatrice</span></b>}
+Les limites de la calculatrice sont:
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>itemize</span>}
+  <span style='color:#f57979;'>\item</span> La capacité des nombres est limité à la taille mémoire de la machine.
+  <span style='color:#f57979;'>\item</span> La précision du nombre est rentré par l'utilisateur, par défaut est de 6 chiffres après la virgule.
+  <span style='color:#f57979;'>\item</span> Les constantes classiques seront enregistrées dans la calculatrice avec une précision d'au moins une centaine de chiffres après la virgule.
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>itemize</span>}
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Accessibilité</span></b>}
+Le site web et le logiciel seront accessible au non-voyants.
+Le site web et le logiciel sont produits pour un usage scientifique. Ceux ci sont donc adapté à un scientifique.
+
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Format</span></b>}
+Le logiciel doit fonctionné sur les plate-formes Windows, Linux et MacOS.
+Le site web doit être compatible avec les navigateurs Google Chrome, Chromium, Mozilla Firefox et Opéra.
+
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Description détaillé du besoin</span></b>}
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Saisie Utilisateur</span></b>}
+La saisie Utilisateur se fera à partir d’un clavier d’ordinateur, en notation infixée classique.
+<span style='color:#34e434;'>$$</span><span style='color:#34e434;'> (3+5)*2 + cos(5*PI) </span><span style='color:#34e434;'>$$</span>
+
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Gestion des fonctions de base</span></b>}
+	Les fonctions basique de style <span style='color:#34e434;'>$* / + - l^{x} </span><span style='color:#b7b735;'>\sqrt</span><span style='color:#34e434;'>{x}$</span> doivent être calculées. Les fonctions de trigonométries classique aussi, tels que cos, sin, tan, arctan, arccos, arcsin, ln, log, exp. Possibilités d’affectation de variables.
+
+	<b><span style='color:#f57979;'>\includegraphics</span></b>[height=4cm]{<span style='color:#9595f3;'>fctbase.png</span>}
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Affichage de graphique</span></b>}
+ Affichage de fonctions graphiques 2D et 3D.
+
+ <b><span style='color:#f57979;'>\includegraphics</span></b>[height=4cm]{<span style='color:#9595f3;'>graph.png</span>}
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Gestion de  la mémoire</span></b>}
+Historique des calculs et des résultats. Réutilisation. Enregistrement dans un journal de session.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Gestion des équations</span></b>}
+Résolution d’une équation jusqu’aux équations de degré 3.
+
+ <b><span style='color:#f57979;'>\includegraphics</span></b>[height=4cm]{<span style='color:#9595f3;'>fctsolve.png</span>}
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Gestion des erreurs</span></b>}
+Affichage des erreurs rencontrées lors de l’exécution de l’algorithme.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Affichage de graphique</span></b>}
+Affichage de fonctions graphique 2D et 3D.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Documentation</span></b>}
+Création d’une documentation contenant la pré-condition et la post-condition de chaque fonction.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Auto-complétion</span></b>}
+Lors de la saisie, l’utilisateur doit avoir une aide à l’écriture des fonctions.
+
+<span style='color:#faa9a9;'>\subsection</span>{<b><span style='color:#7f8080;'>Bonus</span></b>}
+
+<span style='color:#faa9a9;'>\subsubsection</span>{<b><span style='color:#7f8080;'>Gestion des matrices</span></b>}
+	Fonctions basiques de matrices <span style='color:#34e434;'>$ + - * l^{x} $</span>. Linéarisation par Gauss. Gestion de l ‘entrée utilisateur. Déterminant, inverse, transposé, pseudo-inverse.
+
+<span style='color:#faa9a9;'>\subsubsection</span>{<b><span style='color:#7f8080;'>Gestion du calcul différentiel</span></b>}
+Dérivation, intégration (restreint à un certains cadre).
+
+<span style='color:#faa9a9;'>\subsubsection</span>{<b><span style='color:#7f8080;'>Gestions des nombres complexes</span></b>}
+Entrées des nombres complexes. Changement de formes des nombres. Calcul de modules et d’argument.
+
+
+
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Visuel</span></b>}
+
+
+
+<b><span style='color:#f57979;'>\includegraphics</span></b>{<span style='color:#9595f3;'>visual.png</span>}
+
+
+
+
+
+
+
+
+
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+<span style='color:#bdc3c7;'>%	ACCEPTANCE SECTION</span>
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#f57979;'>\newpage</span> <span style='color:#bdc3c7;'>% Put signatures on a separate page</span>
+
+<span style='color:#faa9a9;'>\section</span>{<b><span style='color:#7f8080;'>Approbation</span></b>}
+
+Tous changements du présent contrat sera soumis à l'acceptation des deux parties.
+
+Les signatures suivantes sont témoins de l'acceptation du présent contrat par les deux parties aux dates indiquées.
+<span style='color:#bdc3c7;'>%------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\subsection*</span>{<b><span style='color:#7f8080;'>Le Client</span></b>} <span style='color:#bdc3c7;'>% Suppress section numbering with the *</span>
+
+<span style='color:#f57979;'>\ClientName</span> <span style='color:#f57979;'>\\</span>
+
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>tabular</span>}{lp{10pt}l}
+Signature: <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\makebox</span>[3in]{<span style='color:#f57979;'>\hrulefill</span>} <span style='color:#f57979;'>\\</span> <span style='color:#f57979;'>\\</span>[3pt]
+Nom (en lettres moulées): <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\makebox</span>[3in]{<span style='color:#f57979;'>\hrulefill</span>} <span style='color:#f57979;'>\\</span> <span style='color:#f57979;'>\\</span>[3pt]
+Titre: <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\makebox</span>[3in]{<span style='color:#f57979;'>\hrulefill</span>} <span style='color:#f57979;'>\\</span> <span style='color:#f57979;'>\\</span>[3pt]
+Date: <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\today</span>
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>tabular</span>}
+
+<span style='color:#bdc3c7;'>%------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\subsection*</span>{<b><span style='color:#7f8080;'>Les Développeurs</span></b>} <span style='color:#bdc3c7;'>% Suppress section numbering with the *</span>
+
+<span style='color:#f57979;'>\YourName</span> <span style='color:#f57979;'>\\</span>
+
+<span style='color:#faa9a9;'>\begin</span>{<span style='color:#9595f3;'>tabular</span>}{ l p{10pt} l }
+Signatures: <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\makebox</span>[3in]{<span style='color:#f57979;'>\hrulefill</span>} <span style='color:#f57979;'>\\</span> <span style='color:#f57979;'>\\</span>[3pt]
+Noms (en lettres moulées): <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\makebox</span>[3in]{<span style='color:#f57979;'>\hrulefill</span>} <span style='color:#f57979;'>\\</span> <span style='color:#f57979;'>\\</span>[3pt]
+Titre: <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\makebox</span>[3in]{<span style='color:#f57979;'>\hrulefill</span>} <span style='color:#f57979;'>\\</span> <span style='color:#f57979;'>\\</span>[3pt]
+Date: <b><span style='color:#7e91f6;'>&amp;&amp;</span></b> <span style='color:#f57979;'>\hspace</span>{0.5cm} <span style='color:#f57979;'>\today</span>
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>tabular</span>}
+
+<span style='color:#bdc3c7;'>%----------------------------------------------------------------------------------------</span>
+
+<span style='color:#faa9a9;'>\end</span>{<span style='color:#9595f3;'>document</span>}
+</pre>
+</body>
+</html>
