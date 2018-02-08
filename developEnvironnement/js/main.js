@@ -24,7 +24,7 @@
 
 function calcul(calc){
   return calc;
-  // return parseInt(calc[0]) + parseInt(calc[2]);
+  //return parseInt(calc[0]) + parseInt(calc[2]);
 }
 
 function insert(last){
