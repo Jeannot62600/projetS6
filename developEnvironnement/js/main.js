@@ -50,6 +50,9 @@ function specialKey(e){
   if(e.key == "Enter"){
     makecalc();
   }
+  if(e.key =="Shift"){
+    //open auto-complete
+  }
   //gestion de l'auto complétion ici
 }
 
