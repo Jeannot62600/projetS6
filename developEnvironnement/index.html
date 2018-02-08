@@ -24,70 +24,33 @@
 
     <div id="grid" class="grid grid-pad">
       <!-- <div class="alert alert-success"><i class="material-icons">done</i>Félicitations! Votre environnement de test à été correctement configuré.</div> -->
+		<div class="col-2-3">
+		  <div class="col-1-1">
+		    <!-- <form> -->
+		      <div class="input-group">
+		        <input id="calc" type="text" class="form-control" placeholder="Zone de Saisie" onkeypress="specialKey(event)">
+		        <div class="input-group-btn">
+		          <button class="btn btn-default" onclick="makecalc()">
+		            =
+		          </button>
+		        </div>
+		      </div>
+		    <!-- </form> -->
+		  </div>
+		  <div class="col-1-1">
+		    <div class="historique">
+		      <ul id="hist" class="list-group">
 
-      <div class="col-1-1">
-        <!-- <form> -->
-          <div class="input-group">
-            <input id="calc" type="text" class="form-control" placeholder="Zone de Saisie" onkeypress="specialKey(event)">
-            <div class="input-group-btn">
-              <button class="btn btn-default" onclick="makecalc()">
-                =
-              </button>
-            </div>
-          </div>
-        <!-- </form> -->
-      </div>
-      <div class="col-1-1">
-        <div class="historique">
-          <ul id="hist" class="list-group">
-          </ul>
-            <!-- Work here Lucas san -->
-        </div>
-      </div>
 
-      <!-- <div id="accordion">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Collapsible Group Item #1
-          </button>
-        </h5>
-      </div>
+		      </ul>
+		    </div>
+		  </div>
+     	</div>
 
-      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Collapsible Group Item #2
-          </button>
-        </h5>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style="">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-            Collapsible Group Item #3
-          </button>
-        </h5>
-      </div>
-      <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion" style="">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
+       <div class="col-1-3">
+        	<div id="accordion">
+
+        	</div>
     </div>
   </div> -->
     </div>
@@ -99,5 +62,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script> -->
     <script src="js/main.js"></script>
+    <script src="js/documentation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

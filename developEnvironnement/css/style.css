@@ -55,3 +55,7 @@ i:hover{
 .badge:hover{
   cursor:pointer;
 }
+
+.rep:hover{
+  margin-top: -2px;
+}
