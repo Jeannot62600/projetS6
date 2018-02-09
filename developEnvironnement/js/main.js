@@ -39,14 +39,20 @@ function insert(last){
 }
 
 function Docs(){
-  document.getElementById("grid").innerHTML = `
-  <div class="col-1-1">
-    <div class="card">
-    show docs
-    </div>
 
-  </div>
-  ` + document.getElementById("grid").innerHTML
+  var acc = document.getElementById("accordion");
+  var mai = document.getElementById("main");
+
+  // console.log(acc.style.display);
+  if(acc.style.display=="none"){
+    acc.style.display="block";
+    main.style.width="66.6%";
+
+  }
+  else{
+    acc.style.display="none";
+    main.style.width="100%";
+  }
 }
 
 function specialKey(e){
@@ -74,3 +80,5 @@ function makecalc(){
   document.getElementById("calc").value = "";
   }
 }
+
+Docs()
