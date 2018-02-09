@@ -22,8 +22,11 @@
 // var nb = new Nombre([1,2,3,4,5,6],2);
 // console.log(nb.addCf(7))
 
+
+
 function calcul(calc){
-  return calc;
+  return lexe(calc);
+
   //return parseInt(calc[0]) + parseInt(calc[2]);
 }
 

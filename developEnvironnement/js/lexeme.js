@@ -3,42 +3,15 @@
 */
 
 function lexe(exp){
+  trans = []
 	for (i in exp){
 		letter = exp[i]
-		switch(letter) {
-			case " ":
-				code block
-				break;
-			case "(":
-				code block
-				break;
-			case ")":
-				code block
-				break;
-			case ",":
-				code block
-				break;
-			case "+":
-				code block
-				break;
-			case "-":
-				code block
-				break;
-			case "/":
-				code block
-				break;
-			case "*":
-				code block
-				break;
-			case "%":
-				code block
-				break;
-			case ".":
-				code block
-				break;
-			
-			default:
-				code block
-		} 
+    if ("%,(+-/*)".indexOf(letter) != -1 || "%,(+-/*)".indexOf(trans[trans.length-1]) != -1 || trans.length == 0){
+      trans.push(letter)
+    }
+    else{
+      trans[trans.length-1] += letter
+    }
 	}
+  return trans
 }
