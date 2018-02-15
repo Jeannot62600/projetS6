@@ -1,4 +1,45 @@
 
+var json = `
+
+{ "documentation":[
+
+		{
+			"nomFonction":"FonctionX",
+			"descriptionFonction":"X fait ça",
+			"préconditions":"",
+			"postconditions":"",
+			"exemple":"" 
+		},
+
+		{
+			"nomFonction":"FonctionY",
+			"descriptionFonction":"Y a pour but de",
+			"préconditions":"",
+			"postconditions":"",
+			"exemple":"" 
+		},
+
+		{
+			"nomFonction":"",
+			"descriptionFonction":"",
+			"préconditions":"",
+			"postconditions":"",
+			"exemple":"" 
+		} 
+	]
+}
+
+`
+
+function recupJSON(){
+	obj = JSON.parse(json);
+	document.getElementById("collapse1").innerHTML += obj.documentation[0].nomFonction
+
+}
+
+
+ 
+
        	var accordeon = document.getElementById("accordion");
        	docs = ["docs1", "docs2", "docs3", "docs4"]
        	for (i in docs) {
@@ -19,7 +60,9 @@
 			  	</div>	`;
 			  
 					 
-		} 
+		}
+		
+		recupJSON(); 
 
        
 /*
