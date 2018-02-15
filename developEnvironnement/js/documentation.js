@@ -4,28 +4,34 @@ var json = `
 { "documentation":[
 
 		{
-			"nomFonction":"FonctionX",
-			"descriptionFonction":"X fait ça",
-			"préconditions":"",
-			"postconditions":"",
-			"exemple":"" 
+			"nomFonction":"Puissance",
+			"miniNom":"PUI",
+			"descriptionFonction":"Donne la puissance",
+			"préconditions":"a,b",
+			"postconditions":"a^b",
+			"exemple":"POW(2,3)",
+			"résultExemple":"8" 
 		},
 
 		{
-			"nomFonction":"FonctionY",
-			"descriptionFonction":"Y a pour but de",
+			"nomFonction":"Intégral",
+			"miniNom":"INT",
+			"descriptionFonction":"Calcul une intégrale",
 			"préconditions":"",
 			"postconditions":"",
-			"exemple":"" 
-		},
+			"exemple":"INT(...)",
+			"résultExemple":"..." 
+		}, 
 
 		{
-			"nomFonction":"",
-			"descriptionFonction":"",
+			"nomFonction":"Matrice",
+			"miniNom":"MAT",
+			"descriptionFonction":"Créer une matrice",
 			"préconditions":"",
 			"postconditions":"",
-			"exemple":"" 
-		} 
+			"exemple":"MAT(1,2,3;4,5,6;7,8,9)",
+			"résultExemple":"La matrice" 
+		}
 	]
 }
 
@@ -33,28 +39,47 @@ var json = `
 
 function recupJSON(){
 	obj = JSON.parse(json);
-	document.getElementById("collapse1").innerHTML += obj.documentation[0].nomFonction
+	//document.getElementById("card-body1").innerHTML = obj.documentation[0].nomFonction
 
 }
 
-
- 
+		recupJSON();
+ 		
 
        	var accordeon = document.getElementById("accordion");
-       	docs = ["docs1", "docs2", "docs3", "docs4"]
-       	for (i in docs) {
+       	for (doc in obj.documentation) {
+       		var i = obj.documentation[doc];
     		accordeon.innerHTML += `	
     			<div class="card">
-					<div class="card-header" id="heading` + i + `">
+					<div class="card-header" id="heading` + i.nomFonction + `">
 						<h5 class="mb-0">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse` + i + `" aria-expanded="false" aria-controls="collapse` + i + `">
-				Fonction ` + i + `
+							<i class="material-icons" 
+								onclick="insert2('` + i.miniNom + `()')">reply
+							</i>
+							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse` + i.nomFonction + `" aria-expanded="false" aria-controls="collapse` + i.nomFonction + `">
+				
+				<span id="nomFonction">` + i.nomFonction + `</span> 
+				<span id="miniNom">` + i.miniNom + `</span> 
 							</button>
 						</h5>
 					</div>
-					<div id="collapse` + i + `" class="collapse" aria-labelledby="heading` + i + `" data-parent="#accordion">
-						<div class="card-body">
-							Description ` + i + `
+					<div id="collapse` + i.nomFonction + `" class="collapse" aria-labelledby="heading` + i.nomFonction + `" data-parent="#accordion">
+						<div class="card-body" id="card-body` + i.nomFonction + `">
+							<div id="desc">
+								Description : ` + i.descriptionFonction + `
+							</div>
+							<div id="precond">
+								Préconditions : ` + i.préconditions + `
+							</div>
+							<div id="postcond">
+								Postconditions : ` + i.postconditions + `
+							</div>
+							<div id="exemple">
+								Exemple : ` + i.exemple + `
+							</div>
+							<div id="result">
+								= ` + i.résultExemple + `
+							</div>
 						</div>
 					</div>
 			  	</div>	`;
@@ -65,62 +90,6 @@ function recupJSON(){
 		recupJSON(); 
 
        
-/*
-
-
-
-<div id="accordion">
-			  <!--
-			  <div class="card">
-				<div class="card-header" id="headingTwo">
-				  <h5 class="mb-0">
-					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					  Fonction 2
-					</button>
-				  </h5>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-				  <div class="card-body">
-					Description 2
-				  </div>
-				</div>
-			  </div>
-			  <div class="card">
-				<div class="card-header" id="headingThree">
-				  <h5 class="mb-0">
-					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-					  Fonction 3
-					</button>
-				  </h5>
-				</div>
-				<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-				  <div class="card-body">
-					Description 3
-				  </div>
-				</div>
-			  </div>
-			  <div class="card">
-				<div class="card-header" id="headingFour">
-				  <h5 class="mb-0">
-					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-					  Fonction 4
-					</button>
-				  </h5>
-				</div>
-				<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-				  <div class="card-body">
-					Description 4
-				  </div>
-				</div>
-			  </div>
-			</div>
-			 Commentaire --> 
-			 <script>
-			 	createDocCard();
-			 </script>
-      </div>
-      
-      */
       
       
    

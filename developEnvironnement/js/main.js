@@ -30,6 +30,14 @@ function calcul(calc){
   //return parseInt(calc[0]) + parseInt(calc[2]);
 }
 
+function insert2(last){
+    var calc = document.getElementById("calc");
+    var value = calc.value;
+    var add = last;
+    var res = value.slice(0,calc.selectionStart) + add + value.slice(calc.selectionEnd);
+    calc.value = res;
+}
+
 function insert(last){
     var calc = document.getElementById("calc");
     var value = calc.value;
