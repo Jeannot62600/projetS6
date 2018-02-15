@@ -22,7 +22,7 @@ var json = `
 			"exemple":"INT(...)",
 			"résultExemple":"..." 
 		}, 
-
+		
 		{
 			"nomFonction":"Matrice",
 			"miniNom":"MAT",

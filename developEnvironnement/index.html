@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/awesomplete.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -28,7 +31,9 @@
 		  <div class="col-1-1">
 		    <!-- <form> -->
 		      <div class="input-group">
-		        <input id="calc" type="text" class="form-control" placeholder="Zone de Saisie" onkeypress="specialKey(event)">
+		        <input id="calc" type="text" class="awesomplete" 
+		        data-list="coucou, salut, test, tete" 
+		        placeholder="Zone de Saisie" onkeypress="specialKey(event)" >
 		        <div class="input-group-btn">
 		          <button class="btn btn-default" onclick="makecalc()">
 		            =
@@ -65,6 +70,7 @@
     <script src="js/lexeme.js"></script>
     <script src="js/main.js"></script>
     <script src="js/documentation.js"></script>
+    <script src="js/awesomplete.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
