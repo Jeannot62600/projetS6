@@ -24,18 +24,20 @@ class noeud{
   }
 }
 
-var execTree = new noeud()
+var execTree = new noeud(undefined,undefined,[])
 
 function defineTree(tabwords){
+  // var execTree = new noeud();
   actuel = execTree;
-  for(lex in tabwords){
-    if Number.isInteger(Number(lex)){
+  for(x in tabwords){
+    lex=tabwords[x];
+    if (Number.isInteger(Number(lex))){
       if (actuel.valeur === undefined){
         actuel.valeur = Number(lex);
       } else {
-        actuel.fils.push(noeud(Number(lex),actuel));
+        actuel.fils.push(new noeud(Number(lex),actuel,[]));
       }
-    } else if (" +-/%*^".indexOf(lex) != -1){
+    } else if ("+-/%*^".indexOf(lex) != -1){
       switch (actuel.valeur) {
           case '+': priorityact = 1; break;
           case '-': priorityact = 1; break;
@@ -57,6 +59,8 @@ function defineTree(tabwords){
       if(prioritylex > priorityact){
         actuel = actuel.fils[actuel.fils.length-1];
       }
+      tempnoeud = new noeud(lex)
+      tempnoeud.fils = [actuel]
 
 
     }
