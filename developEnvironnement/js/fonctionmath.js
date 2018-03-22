@@ -1,4 +1,4 @@
-var precision = 6;
+var precision = 3;
 
 class numInf{
 	constructor(valeur){
@@ -70,14 +70,47 @@ function addition(num1, num2){
 	return new numInf(tmp);
 }
 
+function soustraction(num1, num2){
+	var tabRes= new Array();
+	var i = num1.tabVal.length-1;	
+	var j = num2.tabVal.length-1;
+	var k = 0;
+	var retenu = 0;
+	
+	while(num1.tabVal[i]!=null || num2.tabVal[j]!=null){
+			//console.log(num1.tabVal[i]);
+		if(num1.tabVal[i]==null){
+			num1.tabVal[i]=0;
+		}
+		if(num2.tabVal[j]==null){
+			num2.tabVal[j]=0;
+		}
+		tabRes[k] = Number(num1.tabVal[i]) - Number(num2.tabVal[j]) - Number(retenu);
+		if(tabRes[k]<0){
+			console.log(tabRes[i]);
+			retenu = 1;
+			tabRes[k] = tabRes[k] + 10;
+		}
+		else
+			retenu=0;
+		i--;
+		j--;
+		k++;
+	}
+	tabRes.reverse();
+	var tmp = tabRes.join();
+	tmp = 	tmp.replace(/,/g,"");
+	return new numInf(tmp);
+}
 
 
-var numb1 = new numInf("28.92");
-var numb2 = new numInf("523.22");
+
+var numb1 = new numInf("728");
+var numb2 = new numInf("530");
 console.log(numb1.toString());
 console.log(numb2.toString());
 
-console.log(addition(numb1,numb2).tabVal);
+console.log(soustraction(numb1,numb2).tabVal);
 
 
 
