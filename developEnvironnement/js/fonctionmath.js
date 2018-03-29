@@ -1,4 +1,4 @@
-var precision = 3;
+var precision = 6;
 
 class numInf{
 	constructor(valeur){
@@ -36,7 +36,16 @@ class numInf{
 	toString() { 
     	return (""+ this.tabVal + "-" + this.virgule); 
   	}
+  	
+  	parseInt(){
+  		var tmp = this.tabVal.toString().replace(/[\[\],]+/g,"");
+  		tmp = tmp.slice(0,tmp.length-this.virgule) + "." + tmp.slice(tmp.length-this.virgule,tmp.length);
+  		return Number(tmp);
+  	}
+  	
 }
+
+
 
 function addition(num1, num2){
 	var tabRes= new Array();
@@ -78,7 +87,6 @@ function soustraction(num1, num2){
 	var retenu = 0;
 	
 	while(num1.tabVal[i]!=null || num2.tabVal[j]!=null){
-			//console.log(num1.tabVal[i]);
 		if(num1.tabVal[i]==null){
 			num1.tabVal[i]=0;
 		}
@@ -103,14 +111,78 @@ function soustraction(num1, num2){
 	return new numInf(tmp);
 }
 
+function division(num1, num2){
+	
 
 
-var numb1 = new numInf("728");
-var numb2 = new numInf("530");
+}
+
+function comparaison(num1, num2){
+	if(num1.tabVal<num2.tabVal){
+	
+	}
+}
+
+function testZero(num){
+	//retourne true si égale à zéro
+	var i = 0;
+	var flag = true;
+	while(i<num.tabVal.length && flag){
+		if(num.tabVal[i]!=0){
+			flag = false;
+			console.log(flag);
+		}
+		i++;
+	}
+	
+	return flag;	
+}
+
+function mod10(num){
+	return 0;
+}
+
+function multEnt(num1, b){
+	return multEntR(num1,b,0);	
+}
+
+function multEntR(num1, b, retenue){
+	if (testZero(num1) || b=0){
+		return retenue;
+	}
+	var dab = mod10(a);
+}
+
+/*
+Si(TestZero(a)ou TestZero(b))Alors
+	renvoyer retenue
+Sinon
+	dab <− ModDix ( a ) ∗ b + r e t e n u e
+	renvoyer MulDixPlus ( mulEntR ( DivDix ( a ) , b , dab div10),\dab mod10)
+FinSi
+
+*/
+
+/*
+function multiplication(num1, num2){
+	var a = num1.parseInt();
+	var b = num2.parseInt();
+	return new numInf(a*b);
+}
+*/
+
+
+var numb1 = new numInf("0");
+var numb2 = new numInf("508.55");
 console.log(numb1.toString());
 console.log(numb2.toString());
 
-console.log(soustraction(numb1,numb2).tabVal);
+console.log("parseInt:"+numb2.parseInt().toString());
+
+var numb3 = soustraction(numb1,numb2);
+//console.log("axb="+ multiplication(numb1,numb2).toString());
+console.log("ax2="+ multEnt(numb1, 2).toString());
+console.log(numb3.toString());
 
 
 
