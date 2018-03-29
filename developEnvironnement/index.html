@@ -16,11 +16,23 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Calculatrice</a>
+            <a class="navbar-brand" href="#"><div class="dropdown">
+              <img src="media/logo.png" style="width:3em">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Fichier
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button" onclick="Docs()">Documentation</button>
+                <div class="dropdown-divider"></div>
+                <button class="dropdown-item" type="button">Importer une session</button>
+                <button class="dropdown-item" type="button">Exporter une session</button>
+              </div>
+
+
+            </div>
+            </a>
           </div>
-          <button class="btn btn-info navbar-btn" onclick="Docs()">Documentation</button>
-          <button class="btn btn-success navbar-btn">Importez une session</button>
-          <button class="btn btn-danger navbar-btn">Exportez une session</button>
+
 
         </div>
       </nav>

@@ -6,7 +6,7 @@ let mainWindow;
 
 function createWindow () {
 
-  mainWindow = new BrowserWindow({width: 1800, height: 1200});
+  mainWindow = new BrowserWindow({width: 640, height: 480});
 
   mainWindow.loadURL(`file://${__dirname}/developEnvironnement/index.html`);
 
