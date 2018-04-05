@@ -23,6 +23,15 @@
 // console.log(nb.addCf(7))
 
 
+function opencloseMenu(){
+  var menu = document.getElementById("dropdownMenu2")
+
+  if (menu.parentElement.children[2].style.display == "none"){
+    menu.parentElement.children[2].style.display = "inherit";
+  } else {
+    menu.parentElement.children[2].style.display = "none";
+  }
+}
 
 function calcul(calc){
   milexe = lexe(calc);
