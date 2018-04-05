@@ -139,29 +139,50 @@ function testZero(num){
 }
 
 function mod10(num){
-	return 0;
+	//CREE UN CLONE
+	var tmp = num.copy();
+	var tmp1 = tmp.tabVal.reverse();
+	return tmp1[0];
+}
+
+function mulDixPlus(tab, a){
+	if(a<0 || a>10)
+		return 0;
+  	var tab1 = tab.tabVal.slice(0,tab.tabVal.length-this.virgule);
+  	tab1.push(a);
+	var tab2 = tab.tabVal.slice(tab.tabVal.length-this.virgule,tab.tabVal.length);
+  		
+  	return tab1.concat(tab2);
+}
+
+function divDix(a){
+	//A FAIRE
+	return a;
 }
 
 function multEnt(num1, b){
 	return multEntR(num1,b,0);	
 }
 
-function multEntR(num1, b, retenue){
-	if (testZero(num1) || b=0){
-		return retenue;
+function multEntR(a, b, retenue){
+	//a : tableau numInf / b : entier
+	//A FINIR
+	if( !(Object.prototype.toString.call( a.tabVal ) === '[object Array]' )) {
+    	a = new numInf(a);
 	}
-	var dab = mod10(a);
+	
+	if (testZero(a) || b==0){
+		return retenue;	
+	}
+	else{
+		var dab = mod10(a) * b + retenue;
+		//DECLENCHE UNE ERREUR
+		//var temp = mulEntR(divDix(a),b,dab div 10),
+		//return mulDixPlus(temp, dab % 10);
+	}
+	
+	return 0;	
 }
-
-/*
-Si(TestZero(a)ou TestZero(b))Alors
-	renvoyer retenue
-Sinon
-	dab <− ModDix ( a ) ∗ b + r e t e n u e
-	renvoyer MulDixPlus ( mulEntR ( DivDix ( a ) , b , dab div10),\dab mod10)
-FinSi
-
-*/
 
 /*
 function multiplication(num1, num2){
@@ -172,19 +193,30 @@ function multiplication(num1, num2){
 */
 
 
-var numb1 = new numInf("0");
+
+//MAT(2,5,7;5,8,9)
+//MAT("2,5,7;5,8,9;7,5,3")
+
+
+function matrice(param){
+	
+}
+
+var numb1 = new numInf("10");
 var numb2 = new numInf("508.55");
 console.log(numb1.toString());
 console.log(numb2.toString());
 
-console.log("parseInt:"+numb2.parseInt().toString());
-
-var numb3 = soustraction(numb1,numb2);
+console.log("Muldixplus "+mulDixPlus(numb1,5).toString());
+//var numb3 = soustraction(numb1,numb2);
 //console.log("axb="+ multiplication(numb1,numb2).toString());
-console.log("ax2="+ multEnt(numb1, 2).toString());
-console.log(numb3.toString());
+console.log("ax2="+ multEnt(numb1, 2, 0).toString());
+//console.log(numb3.toString());
 
 
 
 
-//"123.5" --> [1,2,3,5]
+//"123.5" --> [1,2,3,5] 1
+
+
+

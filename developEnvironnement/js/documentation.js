@@ -9,7 +9,7 @@ var json = `
 			"descriptionFonction":"Donne la puissance",
 			"préconditions":"a,b",
 			"postconditions":"a^b",
-			"exemple":"POW(2,3)",
+			"exemple":"PUI(2,3)",
 			"résultExemple":"8" 
 		},
 
