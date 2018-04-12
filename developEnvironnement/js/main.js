@@ -34,10 +34,11 @@ function opencloseMenu(){
 }
 
 function calcul(calc){
-  milexe = lexe(calc);
-  defineTree(milexe);
-  console.log(execTree);
-  return milexe;
+  return eval(calc);
+  // milexe = lexe(calc);
+  // defineTree(milexe);
+  // console.log(execTree);
+  // return milexe;
 
   //return parseInt(calc[0]) + parseInt(calc[2]);
 }
