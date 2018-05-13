@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">Testing environement</header>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Calculatrice</a>
+          </div>
+          <button class="btn btn-info navbar-btn">Documentation</button>
+          <button class="btn btn-success navbar-btn">Importez une session</button>
+          <button class="btn btn-danger navbar-btn">Exportez une session</button>
+
+        </div>
+      </nav>
+
+    <div class="grid grid-pad">
+      <!-- <div class="alert alert-success"><i class="material-icons">done</i>Félicitations! Votre environnement de test à été correctement configuré.</div> -->
+
+      <div class="col-1-1">
+        <form>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Zone de Saisie">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit" onclick="makecalc()">
+                =
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-1-1">
+        <div class="historique">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              y=cos(x)
+              <span class=""><canvas id="myChart" width="200" height="200"></canvas></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              17.32 * 3
+              <span class="badge badge-primary badge-pill">51.96</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              37.7 + 5
+              <span class="badge badge-primary badge-pill">52.7</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <footer class="footer">Create By Jean Lapostolle</footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

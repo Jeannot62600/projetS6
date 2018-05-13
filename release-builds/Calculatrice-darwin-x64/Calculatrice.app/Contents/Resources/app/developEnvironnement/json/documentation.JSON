@@ -1,0 +1,29 @@
+
+{ "documentation":[
+
+		{
+			"nomFonction":"FonctionX",
+			"descriptionFonction":"X fait ça",
+			"préconditions":"",
+			"postconditions":"",
+			"exemple":"" 
+		},
+
+		{
+			"nomFonction":"FonctionY",
+			"descriptionFonction":"Y a pour but de",
+			"préconditions":"",
+			"postconditions":"",
+			"exemple":"" 
+		},
+
+		{
+			"nomFonction":"",
+			"descriptionFonction":"",
+			"préconditions":"",
+			"postconditions":"",
+			"exemple":"" 
+		} 
+	]
+}
+
